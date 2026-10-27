@@ -1,0 +1,94 @@
+---
+const links = [
+  { href: "/#inicio", label: "Inicio" },
+  { href: "/#showcase", label: "Módulos" },
+  { href: "/#cumplimiento", label: "Cumplimiento" },
+  { href: "/#planes", label: "Planes" },
+  { href: "/#testimonios", label: "Testimonios" },
+];
+---
+
+<header class="fixed inset-x-0 top-0 z-50 border-b border-outline-variant/30 bg-surface/90 backdrop-blur-xl">
+  <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-12">
+    <a href="/#inicio" class="flex shrink-0 items-center gap-3" aria-label="FarmSys POS, ir al inicio">
+      <img
+        src="/images/logo-mark.webp"
+        width="80"
+        height="80"
+        alt=""
+        class="h-10 w-10 rounded-lg object-contain"
+      />
+      <span class="font-headline-md text-headline-md font-bold leading-none tracking-tight">
+        FarmSys <span class="text-primary">POS</span>
+      </span>
+    </a>
+
+    <nav class="hidden items-center gap-7 xl:flex" aria-label="Navegación principal">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          class="font-label-lg text-label-lg text-on-surface-variant transition-colors hover:text-primary"
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="hidden items-center gap-3 xl:flex">
+      <a
+        href="/acceso"
+        class="inline-flex items-center justify-center rounded-lg bg-surface-container px-4 py-2.5 font-label-lg text-label-lg text-on-surface transition-colors hover:bg-surface-container-high"
+      >
+        Acceso clientes
+      </a>
+      <a
+        href="/#demo"
+        data-cta="header-demo"
+        class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 font-label-lg text-label-lg text-on-primary shadow-sm transition-all hover:-translate-y-0.5 hover:bg-primary-container hover:text-on-primary-container"
+      >
+        Agendar demo
+      </a>
+    </div>
+
+    <button
+      type="button"
+      id="menu-btn"
+      class="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-surface-container text-on-surface xl:hidden"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Abrir menú"
+    >
+      <span class="material-symbols-outlined" id="menu-icon" aria-hidden="true">menu</span>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden border-t border-outline-variant/30 bg-surface xl:hidden">
+    <nav class="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 sm:px-6" aria-label="Navegación móvil">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          class="rounded-lg px-3 py-3 font-label-lg text-label-lg text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href="/acceso"
+        class="rounded-lg px-3 py-3 font-label-lg text-label-lg text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
+      >
+        Acceso clientes
+      </a>
+      <a
+        href="/#demo"
+        data-cta="mobile-menu-demo"
+        class="mt-2 inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 font-label-lg text-label-lg text-on-primary"
+      >
+        Agendar demo
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  import "../scripts/header";
+</script>

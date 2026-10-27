@@ -1,0 +1,32 @@
+---
+const items = [
+  { href: "/#inicio", label: "Inicio", icon: "storefront" },
+  { href: "/#showcase", label: "Módulos", icon: "inventory_2" },
+  { href: "/#planes", label: "Planes", icon: "payments" },
+  { href: "/#demo", label: "Demo", icon: "chat" },
+];
+---
+
+<nav
+  aria-label="Navegación móvil fija"
+  class="fixed inset-x-0 bottom-0 z-40 border-t border-outline-variant/40 bg-surface/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-xl md:hidden"
+>
+  <ul class="grid grid-cols-4">
+    {items.map((item) => (
+      <li>
+        <a
+          href={item.href}
+          data-mobile-link={item.href.split("#")[1]}
+          class="flex flex-col items-center gap-1 px-2 py-3 font-label-sm text-label-sm text-on-surface-variant transition-colors [&.is-active]:text-primary"
+        >
+          <span class="material-symbols-outlined text-[24px]" aria-hidden="true">{item.icon}</span>
+          {item.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<script>
+  import "../scripts/mobile-nav";
+</script>

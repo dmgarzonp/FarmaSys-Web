@@ -1,0 +1,84 @@
+---
+import "@fontsource-variable/plus-jakarta-sans";
+import "@fontsource-variable/inter";
+import "@fontsource/material-symbols-outlined/400.css";
+import "../styles/global.css";
+import { site } from "../config/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "FarmSys POS | Punto de venta y facturación para farmacias en Ecuador",
+  description = "Punto de venta offline-first para farmacias y boticas: facturación electrónica SRI, control FEFO y ARCSA, inventario, compras y reportes. Solicita una demo guiada.",
+} = Astro.props;
+
+const siteUrl = Astro.site ?? new URL(site.domain);
+const canonical = new URL(Astro.url.pathname, siteUrl).href;
+const ogImage = new URL("/images/og-farmsys.jpg", siteUrl).href;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "FarmSys POS",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Windows",
+  description,
+  url: canonical,
+  image: ogImage,
+  inLanguage: "es-EC",
+  publisher: {
+    "@type": "Organization",
+    name: "FarmSys POS",
+    areaServed: "EC",
+    telephone: site.phone,
+  },
+};
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="theme-color" content="#006948" />
+    <meta name="robots" content="index, follow" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_EC" />
+    <meta property="og:site_name" content="FarmSys POS" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, "\\u003c")} />
+  </head>
+  <body class="font-body-md text-body-md text-on-surface antialiased">
+    <div class="page-bg" aria-hidden="true">
+      <div class="page-bg__image"></div>
+      <div class="page-bg__overlay"></div>
+    </div>
+    <a
+      href="#contenido"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-on-primary"
+    >
+      Saltar al contenido
+    </a>
+    <slot />
+  </body>
+</html>

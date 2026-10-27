@@ -1,0 +1,303 @@
+---
+import { whatsappUrl } from "../../config/site";
+
+const whatsapp = whatsappUrl("Hola FarmSys POS, quiero una cotización para mi farmacia.");
+
+const included = [
+  {
+    icon: "payments",
+    title: "Pago único",
+    text: "Sin mensualidades ni cargos recurrentes obligatorios.",
+  },
+  {
+    icon: "computer",
+    title: "Licencia local",
+    text: "Instalación en tu computadora con base de datos offline-first.",
+  },
+  {
+    icon: "support_agent",
+    title: "Soporte en Ecuador",
+    text: "Atención por WhatsApp y soporte remoto cuando lo necesites.",
+  },
+];
+
+const faqs = [
+  {
+    q: "¿El pago es único?",
+    a: "Sí. La licencia se paga una sola vez. La implementación, capacitación, migración y soporte anual son servicios opcionales que se cotizan aparte.",
+  },
+  {
+    q: "¿Cobran por sucursal?",
+    a: "La cotización considera el número de cajas, sucursales y servicios requeridos. Te damos un valor claro antes de instalar, sin costos escondidos.",
+  },
+  {
+    q: "¿Incluye actualizaciones?",
+    a: "Cada licencia se entrega con su versión y condiciones de actualización. Si necesitas actualizaciones y soporte continuo, podemos incluirlos como un plan anual opcional.",
+  },
+  {
+    q: "¿Puedo probar antes de comprar?",
+    a: "Sí. Agenda una demo guiada de 30 minutos y revisamos el flujo real de tu farmacia sin compromiso.",
+  },
+];
+---
+
+<section id="planes" class="scroll-mt-24 w-full surface-glass-white py-space-2xl">
+  <div class="mx-auto flex max-w-7xl flex-col gap-space-xl px-6 lg:px-12">
+    <div class="mx-auto flex max-w-3xl flex-col gap-2 text-center">
+      <span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-primary">
+        Licencia única, sin mensualidades
+      </span>
+      <h2 class="font-headline-xl text-headline-xl tracking-tight text-on-surface">
+        Una inversión que se adapta a tu farmacia
+      </h2>
+      <p class="font-body-md text-body-md text-on-surface-variant">
+        Pago único por licencia. Tú eliges si necesitas implementación, capacitación o soporte anual.
+        El valor se define según el número de cajas, sucursales y servicios.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 items-stretch gap-space-lg lg:grid-cols-3">
+      <div class="flex flex-col justify-between gap-space-md rounded-2xl bg-surface-container-low p-8">
+        <div class="flex flex-col gap-space-sm">
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-headline-sm font-bold text-on-surface">Botica</span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">1 caja · 1 sucursal</span>
+          </div>
+          <div class="my-2 flex flex-wrap items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 font-label-sm text-label-sm font-bold text-primary">
+              <span class="material-symbols-outlined text-[16px]" aria-hidden="true">payments</span>
+              Pago único
+            </span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">Sin mensualidades</span>
+          </div>
+          <ul class="flex flex-col gap-3 pt-2 font-label-md text-label-md text-on-surface">
+            <li class="flex items-center gap-2">
+              <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+              <span>Facturación electrónica SRI (IVA 15% y 0%)</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+              <span>Control FEFO y alertas de caducidad</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+              <span>Catálogo maestro con DCI</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+              <span>Base local Offline-First</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+              <span>Soporte por WhatsApp en horario laboral</span>
+            </li>
+          </ul>
+        </div>
+        <a
+          href="#demo"
+          data-cta="pricing-botica"
+          class="inline-flex w-full items-center justify-center rounded-lg border border-outline-variant bg-surface-container-lowest py-3 text-center font-label-lg text-label-lg text-on-surface transition-colors hover:bg-surface-container"
+        >
+          Solicitar cotización
+        </a>
+      </div>
+
+      <div class="relative flex flex-col justify-between gap-space-md rounded-2xl bg-surface-container p-8 shadow-xl ring-2 ring-primary">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 font-label-sm text-label-sm font-bold uppercase tracking-wider text-on-primary">
+          Recomendado
+        </div>
+        <div class="flex flex-col gap-space-sm pt-2">
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-headline-sm font-bold text-on-surface">Farmacia Pro</span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">Hasta 3 cajas · 1 sucursal</span>
+          </div>
+          <div class="my-2 flex flex-wrap items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1 font-label-sm text-label-sm font-bold text-on-primary">
+              <span class="material-symbols-outlined text-[16px]" aria-hidden="true">payments</span>
+              Pago único
+            </span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">Sin mensualidades</span>
+          </div>
+          <ul class="flex flex-col gap-3 pt-2 font-label-md text-label-md text-on-surface">
+            <li class="flex items-center gap-2 font-bold">
+              <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+              <span>Todo lo de Botica</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+              <span>Hasta 3 cajas / terminales en red</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+              <span>Importación Difare, GPF y Leterago</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+              <span>Libros sanitarios ARCSA para auditoría</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+              <span>Respaldo local y en la nube</span>
+            </li>
+            <li class="flex items-center gap-2 font-bold">
+              <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+              <span>Soporte prioritario por WhatsApp</span>
+            </li>
+          </ul>
+        </div>
+        <a
+          href="#demo"
+          data-cta="pricing-pro"
+          class="inline-flex w-full items-center justify-center rounded-lg bg-primary py-3.5 text-center font-label-lg text-label-lg text-on-primary shadow-md transition-all hover:bg-primary-container hover:text-on-primary-container"
+        >
+          Cotizar mi farmacia
+        </a>
+      </div>
+
+      <div class="flex flex-col justify-between gap-space-md rounded-2xl bg-surface-container-low p-8">
+        <div class="flex flex-col gap-space-sm">
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-headline-sm font-bold text-on-surface">Cadena Multi-Sucursal</span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">2 o más locales</span>
+          </div>
+          <div class="my-2 flex flex-wrap items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 font-label-sm text-label-sm font-bold text-primary">
+              <span class="material-symbols-outlined text-[16px]" aria-hidden="true">payments</span>
+              Pago único
+            </span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">Cotización por volumen</span>
+          </div>
+          <ul class="flex flex-col gap-3 pt-2 font-label-md text-label-md text-on-surface">
+            <li class="flex items-center gap-2">
+              <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+              <span>Cajas ilimitadas por sucursal</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+              <span>Traslado entre bodegas y sucursales</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+              <span>Consolidación centralizada de ventas e IVA</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+              <span>Gestor corporativo de precios y promociones</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+              <span>Migración asistida y gerente de cuenta</span>
+            </li>
+          </ul>
+        </div>
+        <a
+          href={whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-cta="pricing-cadena"
+          class="inline-flex w-full items-center justify-center rounded-lg border border-outline-variant bg-surface-container-lowest py-3 text-center font-label-lg text-label-lg text-on-surface transition-colors hover:bg-surface-container"
+        >
+          Hablar con ventas
+        </a>
+      </div>
+    </div>
+
+    <div class="grid gap-4 rounded-2xl border border-outline-variant/60 bg-surface-container-low p-6 sm:grid-cols-3">
+      {included.map((item) => (
+        <div class="flex items-start gap-3">
+          <span aria-hidden="true" class="material-symbols-outlined text-[22px] text-primary">{item.icon}</span>
+          <div>
+            <p class="font-label-lg text-label-lg font-bold text-on-surface">{item.title}</p>
+            <p class="font-body-sm text-body-sm leading-relaxed text-on-surface-variant">{item.text}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="grid gap-space-lg lg:grid-cols-2">
+      <div class="flex flex-col gap-4 rounded-2xl bg-surface-container-low p-8">
+        <span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-primary">Servicios opcionales</span>
+        <h3 class="font-headline-md text-headline-md text-on-surface">Acompañamiento según tu operación</h3>
+        <p class="font-body-sm text-body-sm leading-relaxed text-on-surface-variant">
+          Se cotizan por separado y solo si los necesitas.
+        </p>
+        <ul class="flex flex-col gap-3 pt-1 font-label-md text-label-md text-on-surface">
+          <li class="flex items-center gap-2">
+            <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+            <span>Implementación remota guiada</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+            <span>Capacitación al equipo de mostrador</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+            <span>Migración de datos y catálogo</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+            <span>Soporte y actualizaciones anuales</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-5 rounded-2xl bg-primary p-8 text-on-primary">
+        <span class="font-label-sm text-label-sm font-bold uppercase tracking-widest text-primary-fixed">
+          Cotización en menos de 24 horas
+        </span>
+        <h3 class="font-headline-md text-headline-md">¿Cómo calculamos tu inversión?</h3>
+        <ul class="flex flex-col gap-3 font-body-sm text-body-sm text-on-primary/90">
+          <li class="flex items-center gap-2">
+            <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary-fixed">check</span>
+            Número de cajas que usarás
+          </li>
+          <li class="flex items-center gap-2">
+            <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary-fixed">check</span>
+            Número de sucursales
+          </li>
+          <li class="flex items-center gap-2">
+            <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary-fixed">check</span>
+            Implementación y capacitación
+          </li>
+          <li class="flex items-center gap-2">
+            <span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary-fixed">check</span>
+            Soporte anual opcional
+          </li>
+        </ul>
+        <div class="mt-auto flex flex-col gap-3 pt-2 sm:flex-row">
+          <a
+            href="#demo"
+            data-cta="pricing-quote"
+            class="inline-flex flex-1 items-center justify-center rounded-lg bg-surface-container-lowest px-5 py-3.5 text-center font-label-lg text-label-lg font-bold text-on-surface transition-colors hover:bg-surface-container"
+          >
+            Solicitar cotización
+          </a>
+          <a
+            href={whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cta="pricing-whatsapp"
+            class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg bg-primary-fixed px-5 py-3.5 text-center font-label-lg text-label-lg text-on-primary-fixed transition-colors hover:bg-primary-fixed-dim"
+          >
+            <span class="material-symbols-outlined text-[20px]" aria-hidden="true">chat</span>
+            Hablar con ventas
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid gap-space-md md:grid-cols-2">
+      {faqs.map((faq) => (
+        <details class="group rounded-xl border border-outline-variant/60 bg-surface-container-low p-5">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-label-lg text-label-lg font-bold text-on-surface">
+            {faq.q}
+            <span aria-hidden="true" class="material-symbols-outlined text-[20px] text-primary transition-transform group-open:rotate-180">
+              expand_more
+            </span>
+          </summary>
+          <p class="pt-3 font-body-sm text-body-sm leading-relaxed text-on-surface-variant">{faq.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

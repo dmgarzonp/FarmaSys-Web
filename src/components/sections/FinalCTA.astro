@@ -1,0 +1,31 @@
+---
+import { whatsappUrl } from "../../config/site";
+
+const whatsapp = whatsappUrl("Hola FarmSys POS, quiero agendar una demo para mi farmacia.");
+---
+
+<section id="contacto" class="scroll-mt-24 w-full bg-primary text-on-primary py-space-2xl">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-space-xl">
+<div class="flex flex-col gap-4 max-w-2xl text-center lg:text-left">
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-widest text-primary-fixed">Implementación Inmediata</span>
+<h2 class="font-headline-xl text-headline-xl lg:font-display lg:text-display font-extrabold tracking-tight leading-tight">
+            Equipa tu farmacia con la herramienta definitiva de gestión
+          </h2>
+<p class="font-body-lg text-body-lg text-on-primary/90 leading-relaxed">
+            Instalación remota guiada vía AnyDesk en menos de 30 minutos. Tu personal capacitado el mismo día y facturando con SRI activo.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-surface-container-lowest text-on-surface font-label-lg text-label-lg font-bold shadow-xl hover:bg-surface-container transition-all" href="#demo">
+<span>Agendar demo</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[20px] text-primary">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-primary-fixed text-on-primary-fixed font-label-lg text-label-lg hover:bg-primary-fixed-dim transition-colors" href={whatsapp} rel="noopener noreferrer" target="_blank">
+<span aria-hidden="true" class="material-symbols-outlined text-[20px]">chat</span>
+<span>Hablar con Soporte WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+</section>

@@ -1,0 +1,82 @@
+---
+import { site, whatsappUrl } from "../config/site";
+
+const year = new Date().getFullYear();
+const whatsapp = whatsappUrl("Hola FarmSys POS, necesito soporte para mi farmacia.");
+---
+
+<footer class="w-full border-t border-outline-variant/30 footer-glass">
+  <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-12">
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+      <div class="flex flex-col gap-4">
+        <a href="/#inicio" class="flex items-center gap-3" aria-label="FarmSys POS, ir al inicio">
+          <img src="/images/logo-mark.webp" width="80" height="80" alt="" class="h-9 w-9 rounded-lg object-contain" />
+          <span class="font-headline-sm text-headline-sm font-bold text-on-surface">FarmSys POS</span>
+        </a>
+        <p class="max-w-xs font-body-sm text-body-sm leading-relaxed text-on-surface-variant">
+          Software de punto de venta para farmacias y boticas de Ecuador. Facturación electrónica SRI,
+          control FEFO/ARCSA e inventario offline-first.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="inline-flex items-center gap-1.5 rounded-full bg-primary-container px-3 py-1 font-label-sm text-label-sm text-on-primary-container">
+            <span class="material-symbols-outlined text-sm" aria-hidden="true">verified</span>
+            SRI Facturación Electrónica
+          </span>
+          <span class="inline-flex items-center gap-1.5 rounded-full bg-secondary-container px-3 py-1 font-label-sm text-label-sm text-on-secondary-container">
+            <span class="material-symbols-outlined text-sm" aria-hidden="true">health_and_safety</span>
+            ARCSA Normativa FEFO
+          </span>
+        </div>
+      </div>
+
+      <nav aria-label="Módulos del sistema" class="flex flex-col gap-3">
+        <h2 class="font-label-lg text-label-lg font-bold text-on-surface">Módulos del sistema</h2>
+        <a href="/#showcase" class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary">Punto de venta</a>
+        <a href="/#showcase" class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary">Inventario FEFO</a>
+        <a href="/#showcase" class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary">Facturación SRI</a>
+        <a href="/#showcase" class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary">Catálogo y DCI</a>
+        <a href="/#showcase" class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary">Reportes de caja</a>
+      </nav>
+
+      <nav aria-label="Soporte y normativa" class="flex flex-col gap-3">
+        <h2 class="font-label-lg text-label-lg font-bold text-on-surface">Soporte y normativa</h2>
+        <a href="/terminos" class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary">Términos del servicio</a>
+        <a href="/privacidad" class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary">Privacidad y datos</a>
+        <a href="/terminos#disponibilidad" class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary">Garantía de disponibilidad</a>
+        <a href="/#cumplimiento" class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary">Cumplimiento SRI/ARCSA</a>
+        <a href="/#demo" class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary">Solicitar una demo</a>
+      </nav>
+
+      <div class="flex flex-col gap-3">
+        <h2 class="font-label-lg text-label-lg font-bold text-on-surface">Presencia en Ecuador</h2>
+        <p class="font-body-sm text-body-sm leading-relaxed text-on-surface-variant">
+          Soporte e implementación en Quito, Guayaquil, Cuenca, Ambato, Loja y Santo Domingo.
+        </p>
+        <a href={`tel:${site.phone}`} class="font-body-sm text-body-sm font-semibold text-on-surface hover:text-primary">
+          {site.phoneDisplay}
+        </a>
+        <a
+          href={whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-cta="footer-whatsapp"
+          class="inline-flex w-fit items-center gap-2 rounded-lg bg-secondary-container px-3 py-2 font-label-sm text-label-sm font-semibold text-on-secondary-container transition-colors hover:bg-secondary-fixed-dim"
+        >
+          <span class="material-symbols-outlined text-[18px]" aria-hidden="true">chat</span>
+          Soporte por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-col gap-4 border-t border-outline-variant/40 pt-6 md:flex-row md:items-center md:justify-between">
+      <p class="font-label-sm text-label-sm text-on-surface-variant">
+        © {year} FarmSys POS Ecuador. Todos los derechos reservados.
+      </p>
+      <div class="flex flex-wrap gap-5">
+        <a href="/terminos" class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary">Términos del Servicio</a>
+        <a href="/privacidad" class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary">Privacidad y Datos</a>
+        <a href="/terminos#disponibilidad" class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary">Garantía de Disponibilidad</a>
+      </div>
+    </div>
+  </div>
+</footer>

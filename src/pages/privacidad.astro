@@ -1,0 +1,99 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import MobileNav from "../components/MobileNav.astro";
+import { whatsappUrl } from "../config/site";
+
+const updated = "24 de octubre de 2026";
+---
+
+<BaseLayout
+  title="Política de privacidad | FarmSys POS"
+  description="Cómo FarmSys POS trata los datos personales de visitantes y clientes, conforme a la normativa ecuatoriana."
+>
+  <Header />
+  <main id="contenido" class="bg-surface px-4 pb-20 pt-32 sm:px-6">
+    <article class="mx-auto max-w-3xl ">
+      <a href="/" class="font-label-sm text-label-sm text-primary hover:underline">← Volver al inicio</a>
+      <h1 class="mt-4 font-headline-xl text-headline-xl text-on-surface">Política de privacidad</h1>
+      <p class="mt-2 font-label-sm text-label-sm text-on-surface-variant">Última actualización: {updated}</p>
+
+      <div class="mt-8 flex flex-col gap-8 font-body-md text-body-md leading-relaxed text-on-surface-variant">
+        <section>
+          <h2 class="font-headline-md text-headline-md text-on-surface">1. Responsable del tratamiento</h2>
+          <p class="mt-2">
+            FarmSys POS Ecuador es responsable de los datos personales que se recopilan a través de este
+            sitio web. Para consultas sobre privacidad puedes escribir a
+            <a href={whatsappUrl("Hola FarmSys POS, tengo una consulta sobre privacidad.")} class="text-primary underline underline-offset-2">nuestro canal de soporte</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-headline-md text-headline-md text-on-surface">2. Datos que recopilamos</h2>
+          <p class="mt-2">
+            Cuando solicitas una demo podemos recibir tu nombre, nombre de la farmacia, ciudad, número de
+            WhatsApp y correo electrónico. También podemos recibir datos técnicos agregados de navegación
+            si habilitamos herramientas de analítica.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-headline-md text-headline-md text-on-surface">3. Finalidad</h2>
+          <p class="mt-2">
+            Usamos tus datos para responder solicitudes, coordinar demostraciones, brindar soporte y
+            enviar información relacionada con FarmSys POS. No vendemos ni alquilamos datos personales.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-headline-md text-headline-md text-on-surface">4. Base legal y conservación</h2>
+          <p class="mt-2">
+            El tratamiento se basa en tu consentimiento y en el interés legítimo de atender solicitudes
+            comerciales. Conservamos los datos durante el tiempo necesario para gestionar la relación y
+            cumplir obligaciones legales.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-headline-md text-headline-md text-on-surface">5. Derechos</h2>
+          <p class="mt-2">
+            Puedes solicitar acceso, rectificación, actualización, eliminación u oposición al tratamiento
+            de tus datos escribiendo a nuestro canal de soporte. Atenderemos la solicitud en los plazos
+            previstos por la Ley Orgánica de Protección de Datos Personales del Ecuador.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-headline-md text-headline-md text-on-surface">6. Cookies y analítica</h2>
+          <p class="mt-2">
+            Este sitio puede utilizar cookies técnicas necesarias para su funcionamiento. Si se incorporan
+            herramientas de analítica o publicidad, se solicitará el consentimiento correspondiente.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-headline-md text-headline-md text-on-surface">7. Seguridad</h2>
+          <p class="mt-2">
+            Aplicamos medidas técnicas y organizativas razonables para proteger la información. Ningún
+            sistema es absolutamente infalible, por lo que recomendamos no compartir datos sensibles por
+            canales no cifrados.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-headline-md text-headline-md text-on-surface">8. Uso de WhatsApp</h2>
+          <p class="mt-2">
+            El formulario de demo y cotización no envía datos a nuestros servidores: abre WhatsApp con la
+            información que ingresaste para que puedas revisarla antes de enviarla. La conversación se
+            procesa en WhatsApp/Meta conforme a sus propias políticas. Si no deseas usar WhatsApp, puedes
+            contactarnos por teléfono. No incluimos datos personales reales en capturas, videos ni materiales
+            de demostración.
+          </p>
+        </section>
+      </div>
+    </article>
+  </main>
+  <Footer />
+  <MobileNav />
+</BaseLayout>

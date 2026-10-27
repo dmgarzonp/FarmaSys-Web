@@ -1,0 +1,151 @@
+<section id="showcase" class="scroll-mt-24 w-full surface-glass-white py-space-2xl">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-space-xl">
+<div class="text-center max-w-3xl mx-auto flex flex-col gap-3">
+<span class="font-label-sm text-label-sm uppercase font-bold text-primary tracking-wider">Flujo de Trabajo Operativo</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Explora la interfaz real de FarmSys POS</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Diseñado con contraste clínico y sin elementos distractores para jornadas intensivas de trabajo en caja.</p>
+</div>
+<!-- Tab Buttons -->
+<div role="tablist" aria-label="Módulos de FarmSys POS" class="flex flex-wrap items-center justify-center gap-2">
+<button type="button" role="tab" aria-selected="true" aria-controls="view-pos" tabindex="0" data-tab="pos" class="tab-btn px-5 py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg flex items-center gap-2 transition-all" id="tab-btn-pos">
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]">point_of_sale</span>
+<span>Punto de Venta Ágil (F1)</span>
+</button>
+<button type="button" role="tab" aria-selected="false" aria-controls="view-dashboard" tabindex="-1" data-tab="dashboard" class="tab-btn px-5 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center gap-2 hover:bg-surface-container-high transition-all" id="tab-btn-dashboard">
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]">dashboard</span>
+<span>Dashboard &amp; Semáforo FEFO (F2)</span>
+</button>
+<button type="button" role="tab" aria-selected="false" aria-controls="view-catalogo" tabindex="-1" data-tab="catalogo" class="tab-btn px-5 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center gap-2 hover:bg-surface-container-high transition-all" id="tab-btn-catalogo">
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]">inventory_2</span>
+<span>Catálogo de Medicamentos (F4)</span>
+</button>
+<button type="button" role="tab" aria-selected="false" aria-controls="view-registro" tabindex="-1" data-tab="registro" class="tab-btn px-5 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center gap-2 hover:bg-surface-container-high transition-all" id="tab-btn-registro">
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]">library_add</span>
+<span>Alta de Fármacos &amp; ARCSA</span>
+</button>
+</div>
+<!-- Tab View Display -->
+<div class="rounded-2xl bg-surface-container-low p-4 lg:p-8 flex flex-col gap-6">
+<!-- Display 1: POS -->
+<div role="tabpanel" aria-labelledby="tab-btn-pos" class="tab-view flex flex-col lg:flex-row gap-8 items-center" id="view-pos">
+<div class="w-full lg:w-7/12 rounded-xl overflow-hidden shadow-xl bg-surface">
+<img alt="FarmSys POS pantalla de ventas con selección rápida de unidades y cajas" width="512" height="321" class="w-full h-auto object-cover" src="/images/hero-pos.webp">
+</div>
+<div class="w-full lg:w-5/12 flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold w-fit">
+<span>MÓDULO DE CAJA Y MOSTRADOR</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-surface">Venta ultrarrápida sin despegar las manos del teclado</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Los clientes en una farmacia no quieren esperar. Con presionar <span class="px-2 py-0.5 rounded bg-surface-container-highest font-mono font-bold text-on-surface text-label-sm">F2</span> buscas cualquier fármaco por código de barras o texto libre, eliges unidad suelta o caja con <span class="px-2 py-0.5 rounded bg-surface-container-highest font-mono font-bold text-on-surface text-label-sm">Enter</span> y facturas al SRI con <span class="px-2 py-0.5 rounded bg-surface-container-highest font-mono font-bold text-on-surface text-label-sm">F1</span>.
+            </p>
+<ul class="flex flex-col gap-2 pt-2 font-label-md text-label-md text-on-surface">
+<li class="flex items-center gap-2">
+<span aria-hidden="true" class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>Alerta visual inmediata de medicamento con Receta Médica</span>
+</li>
+<li class="flex items-center gap-2">
+<span aria-hidden="true" class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>Asignación de cliente por Cédula o Consumidor Final</span>
+</li>
+<li class="flex items-center gap-2">
+<span aria-hidden="true" class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>Totalización con desglose fiscal de IVA 0% e IVA 15%</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Display 2: Dashboard -->
+<div role="tabpanel" aria-labelledby="tab-btn-dashboard" class="tab-view hidden flex flex-col lg:flex-row gap-8 items-center" id="view-dashboard">
+<div class="w-full lg:w-7/12 rounded-xl overflow-hidden shadow-xl bg-surface">
+<img alt="FarmSys Dashboard con métricas de ventas y semáforo de caducidad de lotes" width="512" height="321" class="w-full h-auto object-cover" src="/images/dashboard.webp">
+</div>
+<div class="w-full lg:w-5/12 flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold w-fit">
+<span>INTELIGENCIA DE NEGOCIO &amp; FEFO</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-surface">Control absoluto del capital inmovilizado y fechas críticas</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Visualiza en tiempo real las ventas netas del día, los comprobantes emitidos, el valor del inventario a costo de adquisición y el semáforo de caducidad a 90 días para ejecutar canjes antes de que se conviertan en pérdida económica.
+            </p>
+<ul class="flex flex-col gap-2 pt-2 font-label-md text-label-md text-on-surface">
+<li class="flex items-center gap-2">
+<span aria-hidden="true" class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span>Top 5 productos más vendidos del mes con rentabilidad</span>
+</li>
+<li class="flex items-center gap-2">
+<span aria-hidden="true" class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span>Sugerencia automática de órdenes de compra para stock bajo</span>
+</li>
+<li class="flex items-center gap-2">
+<span aria-hidden="true" class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span>Arqueo de caja ciego para evitar discrepancias de turno</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Display 3: Catálogo -->
+<div role="tabpanel" aria-labelledby="tab-btn-catalogo" class="tab-view hidden flex flex-col lg:flex-row gap-8 items-center" id="view-catalogo">
+<div class="w-full lg:w-7/12 rounded-xl overflow-hidden shadow-xl bg-surface">
+<img alt="FarmSys Catálogo Maestro de Medicamentos con DCI y presentaciones" width="512" height="321" class="w-full h-auto object-cover" src="/images/catalogo.webp">
+</div>
+<div class="w-full lg:w-5/12 flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold w-fit">
+<span>CATÁLOGO DCI &amp; EQUIVALENCIAS</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-surface">Tu inventario ordenado por principio activo y presentación</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Filtra medicamentos por categoría: antibióticos, psicotrópicos sujetos a fiscalización, venta libre o receta retenida. Importa catálogos de proveedores en segundos vía Excel o CSV sin tener que tipear miles de líneas a mano.
+            </p>
+<ul class="flex flex-col gap-2 pt-2 font-label-md text-label-md text-on-surface">
+<li class="flex items-center gap-2">
+<span aria-hidden="true" class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span>Importación masiva compatible con facturas electrónicas XML</span>
+</li>
+<li class="flex items-center gap-2">
+<span aria-hidden="true" class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span>PVP Caja y PVP Fracción vinculados con cálculo de IVA</span>
+</li>
+<li class="flex items-center gap-2">
+<span aria-hidden="true" class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span>Gestión de múltiples códigos de barras por producto</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Display 4: Registro & Rentabilidad -->
+<div role="tabpanel" aria-labelledby="tab-btn-registro" class="tab-view hidden flex flex-col lg:flex-row gap-8 items-center" id="view-registro">
+<div class="w-full lg:w-7/12 rounded-xl overflow-hidden shadow-xl bg-surface">
+<img alt="FarmSys Formulario de nuevo medicamento con regulaciones ARCSA y margen de ganancia" width="512" height="321" class="w-full h-auto object-cover" src="/images/registro.webp">
+</div>
+<div class="w-full lg:w-5/12 flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold w-fit">
+<span>RENTABILIDAD &amp; NORMATIVA ARCSA</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-surface">Calculadora automática de utilidad neta y trazabilidad</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Define el costo de compra y calcula con un clic tu margen sugerido (20%, 30%, 40%). Configura en segundos las regulaciones ARCSA como exigencia de receta o condición de antibiótico para cumplir al 100% las inspecciones sanitarias.
+            </p>
+<ul class="flex flex-col gap-2 pt-2 font-label-md text-label-md text-on-surface">
+<li class="flex items-center gap-2">
+<span aria-hidden="true" class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>Interruptor para Tarifa IVA 0% (Medicamentos de uso humano)</span>
+</li>
+<li class="flex items-center gap-2">
+<span aria-hidden="true" class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>Cálculo inmediato de PVP por pastilla o blíster fraccionado</span>
+</li>
+<li class="flex items-center gap-2">
+<span aria-hidden="true" class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>Etiquetado para psicotrópicos y sustancias controladas</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+  import "../../scripts/showcase";
+</script>

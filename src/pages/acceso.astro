@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import MobileNav from "../components/MobileNav.astro";
+import { site, whatsappUrl } from "../config/site";
+
+const whatsapp = whatsappUrl("Hola FarmSys POS, necesito acceder a mi cuenta.");
+---
+
+<BaseLayout title="Acceso clientes | FarmSys POS" description="Acceso al soporte y a la plataforma de clientes de FarmSys POS.">
+  <Header />
+  <main id="contenido" class="flex min-h-[70vh] items-center bg-surface px-4 pb-16 pt-32 sm:px-6">
+    <div class="mx-auto w-full max-w-lg rounded-2xl border border-outline-variant/50 bg-surface-container-lowest p-8 text-center shadow-xl">
+      <span class="material-symbols-outlined text-[44px] text-primary" aria-hidden="true">account_circle</span>
+      <h1 class="mt-4 font-headline-xl text-headline-xl text-on-surface">Acceso clientes</h1>
+      <p class="mt-3 font-body-md text-body-md leading-relaxed text-on-surface-variant">
+        Si ya eres cliente de FarmSys POS, nuestro equipo te ayuda a recuperar el acceso, activar una
+        licencia o resolver un inconveniente con tu instalación.
+      </p>
+      <div class="mt-6 flex flex-col gap-3">
+        <a
+          href={whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 font-label-lg text-label-lg text-on-primary transition-colors hover:bg-primary-container hover:text-on-primary-container"
+        >
+          <span class="material-symbols-outlined text-[20px]" aria-hidden="true">chat</span>
+          Contactar a soporte
+        </a>
+        <a
+          href="/#demo"
+          class="inline-flex items-center justify-center rounded-lg border border-outline-variant px-5 py-3 font-label-lg text-label-lg text-on-surface transition-colors hover:bg-surface-container"
+        >
+          Solicitar una demo
+        </a>
+      </div>
+      <p class="mt-5 font-label-sm text-label-sm text-on-surface-variant">
+        Horario de atención: {site.supportHours}.
+      </p>
+    </div>
+  </main>
+  <Footer />
+  <MobileNav />
+</BaseLayout>

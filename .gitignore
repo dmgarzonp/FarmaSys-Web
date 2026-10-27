@@ -1,0 +1,30 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+.astro/
+
+# local env & secrets
+.env
+.env.*
+!.env.example
+
+# editor / os
+.DS_Store
+
+# temp
+.tmp/
+
+# databases, backups and dumps with personal data
+*.sqlite
+*.sqlite3
+*.db
+*.sql
+*.dump
+*.bak
+backups/
+FarmSys_Backups/
+
+# deployment archive
+*.zip

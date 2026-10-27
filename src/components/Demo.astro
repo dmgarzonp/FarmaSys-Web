@@ -1,0 +1,207 @@
+---
+import { whatsappUrl } from "../config/site";
+
+const whatsapp = whatsappUrl("Hola FarmSys POS, quiero solicitar una demo y una cotización para mi farmacia.");
+---
+
+<section id="demo" class="scroll-mt-24 w-full surface-glass py-space-2xl">
+  <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:px-12">
+    <div class="flex flex-col gap-6">
+      <span class="font-label-sm text-label-sm font-bold uppercase tracking-widest text-primary">Demo y cotización</span>
+      <h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+        Mira FarmSys POS funcionando en tu farmacia
+      </h2>
+      <p class="max-w-xl font-body-lg text-body-lg leading-relaxed text-on-surface-variant">
+        Agenda una demo de 30 minutos con nuestro equipo. Revisamos tu volumen de ventas, tus
+        procesos de facturación y te enviamos una cotización según el tamaño de tu operación.
+      </p>
+
+      <ul class="flex flex-col gap-3">
+        {[
+          "Demostración con datos y productos de ejemplo.",
+          "Sin instalar nada: se realiza por videollamada o AnyDesk.",
+          "Incluye revisión de facturación SRI, control FEFO/ARCSA y cotización a tu medida.",
+        ].map((item) => (
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined mt-0.5 text-[20px] text-primary" aria-hidden="true">check_circle</span>
+            <span class="font-body-md text-body-md text-on-surface-variant">{item}</span>
+          </li>
+        ))}
+      </ul>
+
+      <div class="flex flex-wrap items-center gap-4 pt-2">
+        <a
+          href={whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-cta="demo-whatsapp"
+          class="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 font-label-lg text-label-lg text-on-primary transition-colors hover:bg-primary-container hover:text-on-primary-container"
+        >
+          <span class="material-symbols-outlined text-[20px]" aria-hidden="true">chat</span>
+          Escribir por WhatsApp
+        </a>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">Respuesta en horario laboral</span>
+      </div>
+    </div>
+
+    <div class="rounded-2xl border border-outline-variant/60 bg-surface-container-lowest p-6 shadow-xl sm:p-8">
+      <form id="demo-form" class="flex flex-col gap-5" method="post" action="#demo" novalidate>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="flex flex-col gap-2">
+            <label for="nombre" class="font-label-sm text-label-sm font-bold uppercase tracking-wide text-on-surface-variant">
+              Nombre y apellido
+            </label>
+            <input
+              id="nombre"
+              name="nombre"
+              type="text"
+              autocomplete="name"
+              required
+              class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 font-body-md text-body-md text-on-surface outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="farmacia" class="font-label-sm text-label-sm font-bold uppercase tracking-wide text-on-surface-variant">
+              Farmacia o botica
+            </label>
+            <input
+              id="farmacia"
+              name="farmacia"
+              type="text"
+              autocomplete="organization"
+              required
+              class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 font-body-md text-body-md text-on-surface outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+            />
+          </div>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="flex flex-col gap-2">
+            <label for="cajas" class="font-label-sm text-label-sm font-bold uppercase tracking-wide text-on-surface-variant">
+              Número de cajas
+            </label>
+            <select
+              id="cajas"
+              name="cajas"
+              required
+              class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 font-body-md text-body-md text-on-surface outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+            >
+              <option value="">Selecciona una opción</option>
+              <option>1 caja</option>
+              <option>2 a 3 cajas</option>
+              <option>4 a 6 cajas</option>
+              <option>7 o más cajas</option>
+            </select>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="sucursales" class="font-label-sm text-label-sm font-bold uppercase tracking-wide text-on-surface-variant">
+              Número de sucursales
+            </label>
+            <select
+              id="sucursales"
+              name="sucursales"
+              required
+              class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 font-body-md text-body-md text-on-surface outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+            >
+              <option value="">Selecciona una opción</option>
+              <option>1 sucursal</option>
+              <option>2 a 3 sucursales</option>
+              <option>4 o más sucursales</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="flex flex-col gap-2">
+            <label for="ciudad" class="font-label-sm text-label-sm font-bold uppercase tracking-wide text-on-surface-variant">
+              Ciudad
+            </label>
+            <select
+              id="ciudad"
+              name="ciudad"
+              required
+              class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 font-body-md text-body-md text-on-surface outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+            >
+              <option value="">Selecciona una ciudad</option>
+              <option>Quito</option>
+              <option>Guayaquil</option>
+              <option>Cuenca</option>
+              <option>Ambato</option>
+              <option>Loja</option>
+              <option>Santo Domingo</option>
+              <option>Otra</option>
+            </select>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="whatsapp" class="font-label-sm text-label-sm font-bold uppercase tracking-wide text-on-surface-variant">
+              WhatsApp
+            </label>
+            <input
+              id="whatsapp"
+              name="whatsapp"
+              type="tel"
+              inputmode="tel"
+              autocomplete="tel"
+              placeholder="+593 99 999 9999"
+              required
+              class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 font-body-md text-body-md text-on-surface outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="email" class="font-label-sm text-label-sm font-bold uppercase tracking-wide text-on-surface-variant">
+            Correo electrónico <span class="font-normal normal-case text-on-surface-variant">(opcional)</span>
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 font-body-md text-body-md text-on-surface outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+          />
+        </div>
+
+        <label class="flex items-start gap-3">
+          <input
+            id="consent"
+            name="consent"
+            type="checkbox"
+            required
+            class="mt-1 h-4 w-4 rounded border-outline-variant text-primary focus:ring-primary"
+          />
+          <span class="font-body-sm text-body-sm leading-relaxed text-on-surface-variant">
+            Acepto ser contactado por FarmSys y el tratamiento de mis datos según la
+            <a href="/privacidad" class="font-semibold text-primary underline underline-offset-2">política de privacidad</a>.
+          </span>
+        </label>
+
+        <noscript>
+          <p class="rounded-lg bg-surface-container px-4 py-3 font-body-sm text-body-sm text-on-surface-variant">
+            Este formulario necesita JavaScript. También puedes escribirnos directamente por
+            <a href={whatsapp} class="font-semibold text-primary underline underline-offset-2">WhatsApp</a>.
+          </p>
+        </noscript>
+        <button
+          type="submit"
+          id="demo-submit"
+          data-cta="demo-form-submit"
+          hidden
+          class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3.5 font-label-lg text-label-lg text-on-primary transition-all hover:-translate-y-0.5 hover:bg-primary-container hover:text-on-primary-container"
+        >
+          <span class="material-symbols-outlined text-[20px]" aria-hidden="true">send</span>
+          Solicitar demo y cotización
+        </button>
+
+        <p id="demo-status" role="status" class="hidden rounded-lg bg-primary-fixed px-4 py-3 font-body-sm text-body-sm text-on-primary-fixed"></p>
+        <p class="font-label-sm text-label-sm text-on-surface-variant">
+          No almacenamos tus datos en este sitio: el formulario abre WhatsApp con tu solicitud.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  import "../scripts/demo";
+</script>

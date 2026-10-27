@@ -1,0 +1,87 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import MobileNav from "../components/MobileNav.astro";
+import { site, whatsappUrl } from "../config/site";
+
+const updated = "24 de octubre de 2026";
+---
+
+<BaseLayout
+  title="Términos del servicio | FarmSys POS"
+  description="Condiciones de uso del sitio web y de las demostraciones de FarmSys POS."
+>
+  <Header />
+  <main id="contenido" class="bg-surface px-4 pb-20 pt-32 sm:px-6">
+    <article class="mx-auto max-w-3xl ">
+      <a href="/" class="font-label-sm text-label-sm text-primary hover:underline">← Volver al inicio</a>
+      <h1 class="mt-4 font-headline-xl text-headline-xl text-on-surface">Términos del servicio</h1>
+      <p class="mt-2 font-label-sm text-label-sm text-on-surface-variant">Última actualización: {updated}</p>
+
+      <div class="mt-8 flex flex-col gap-8 font-body-md text-body-md leading-relaxed text-on-surface-variant">
+        <section>
+          <h2 class="font-headline-md text-headline-md text-on-surface">1. Uso del sitio</h2>
+          <p class="mt-2">
+            Este sitio tiene fines informativos y comerciales. Al utilizarlo aceptas no realizar acciones
+            que afecten su disponibilidad, seguridad o el funcionamiento de sus servicios.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-headline-md text-headline-md text-on-surface">2. Demostraciones</h2>
+          <p class="mt-2">
+            Las demostraciones son gratuitas y no generan obligación de compra. Los datos mostrados en
+            ejemplos y capturas son referenciales y pueden variar según la configuración de cada farmacia.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-headline-md text-headline-md text-on-surface">3. Propiedad intelectual</h2>
+          <p class="mt-2">
+            La marca, el software, los textos, las imágenes y el diseño de FarmSys POS están protegidos por
+            la normativa aplicable. No se permite su reproducción sin autorización previa.
+          </p>
+        </section>
+
+        <section id="disponibilidad" class="scroll-mt-28">
+          <h2 class="font-headline-md text-headline-md text-on-surface">4. Garantía de disponibilidad</h2>
+          <p class="mt-2">
+            FarmSys POS opera con arquitectura offline-first: las ventas continúan funcionando sin conexión
+            y se sincronizan cuando el internet se restablece. La disponibilidad de servicios en la nube,
+            facturación electrónica y soporte depende de factores externos como el proveedor de internet,
+            los servicios del SRI y el estado del equipo del cliente.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-headline-md text-headline-md text-on-surface">5. Limitación de responsabilidad</h2>
+          <p class="mt-2">
+            La información de este sitio no constituye asesoría legal o tributaria. El cumplimiento
+            normativo final es responsabilidad de cada establecimiento. Los resultados mencionados en
+            testimonios o ejemplos no garantizan resultados idénticos.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-headline-md text-headline-md text-on-surface">6. Legislación aplicable</h2>
+          <p class="mt-2">
+            Estos términos se rigen por la legislación de la República del Ecuador. Cualquier controversia
+            se someterá a los tribunales competentes de la ciudad de Quito.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-headline-md text-headline-md text-on-surface">7. Contacto</h2>
+          <p class="mt-2">
+            Para consultas sobre estos términos, escríbenos por
+            <a href={whatsappUrl("Hola FarmSys POS, tengo una consulta sobre los términos del servicio.")} class="text-primary underline underline-offset-2">WhatsApp</a>
+            o llama al <a href={`tel:${site.phone}`} class="text-primary underline underline-offset-2">{site.phoneDisplay}</a>.
+          </p>
+        </section>
+      </div>
+    </article>
+  </main>
+  <Footer />
+  <MobileNav />
+</BaseLayout>
